@@ -6,34 +6,19 @@ html{
     background-repeat: no repeat;
     background-size: 6600%;
 }
-.container2 > div {
-    border: solid;
-}
-.container2{
-    display: grid;
-    /* defining how many columns there will be */
-    grid-template-columns: 1fr 1fr 1fr;
-    /* defines how many rows there will be */
-    grid-template-rows: 200px 50px 100px 200px 40pc;
-    grid-template-areas:
-    
-        "header header header"
-        "nav nav nav"
-        "slogan slogan slogan"
-        "blog blog blog"
-        "footer footer footer";
-    grid-gap: 10px;
-}
 
-/* use space between to put.... space between */
+/* header CSS for the "BCL 4 RESUMES */
 .childheader{
     font-family: 'Nunito', sans-serif;
     grid-area: header;
     display: block;
     justify-content: left;
     
+    
     /* fix the header part */
 }
+
+
 #headline2 {
     display: flex;
     /* justify-content: center; */
@@ -43,21 +28,10 @@ html{
     justify-content: space-evenly;
     /* background-color: black; */
 }
-.child nav2{
-    overflow: hidden;
-    position: fixed;
-    top: 0%;
-    grid-area: nav;
-    font-size: 30px;
-    display: flex;
-    color: aliceblue;
-    justify-content: space-evenly;
-    background-color: aliceblue;
-    animation: child nav2 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+/* trying to make my nav bar wigggle at random and oddly this was a lot harder and time cosuming than I expected.. BUT! keeping it here because
+I love to see the effort that I put into it */
 
-}
-/* trying to make my nav bar wigggle at random */
-@keyframe .child nav2 {
+/* @keyframe .child nav2 {
     0%,
     100% {
         transform: rotate(0deg);
@@ -81,7 +55,7 @@ html{
     90% {
         transform:  translateX(-8px);
     }
-}
+} */
 
 
 
@@ -90,6 +64,7 @@ html{
     display: flex;
     justify-content: center;
     font-family: fantasy;
+    font-size:  150%;
     background-color: yellowgreen;
     border-radius: 30%;
     margin-top: 5%;
@@ -116,7 +91,7 @@ html{
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    perspective: 3px;
+    perspective: 5px;
 }
 .secwrap {
     position: relative;
@@ -130,7 +105,7 @@ html{
 .onwrap::after {
     content: " ";
     position: absolute;
-    top: 10%;
+    top: 15%;
     right: 0;
     bottom: 50%;
     left: 0;
@@ -149,7 +124,7 @@ html{
     background-size: 100%;
     z-index: -1;
 }
-
+/* ADDED THE BACKGROUND TO THE PARRALLAX EFFECT */
 .backg1::after {
     background-image: url(../images/interviewing.jpg);
     background-repeat: no-repeat;
@@ -165,15 +140,18 @@ html{
 }
 
 #p1 {
-    font-size: 20px;
+    font-size: 50px;
     margin-left: 20%;
+    text-align: center;
     background-color: rgb(3, 3, 3);
     opacity: .5;
-    border-radius: 5%;
-
+    border-radius: 15%;
+    box-shadow: 3px 3px 50px black;
 }
 a{
-    /* border: solid; */
+    text-decoration: none;
+    font-size: 45px;
+    color: aliceblue;
 }
 
 
@@ -193,7 +171,7 @@ a{
     /* defining how many columns there will be */
     grid-template-columns: 1fr 1fr 1fr;
     /* defines how many rows there will be */
-    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-rows: 450px 450px 450px 450px;
     grid-template-areas:
     
         "header nav nav"
@@ -208,18 +186,20 @@ a{
     /* border-radius: 40%; */
     border: none;
 }
-/* #pic1 {
-    border-radius: 40%;
-    height: 100%;
-} */
+
 .nav{
     grid-area: nav;
+    text-decoration: none;
+}
+#pic1 {
+    height: 100%;
+    width: 100%; 
 }
 #began {
     color: aliceblue;
-    font-size: 50%;
+    font-size: 85%;
     font-family: 'Times New Roman', Times, serif;
-    text-anchor: end;
+    text-align: wrap;
 }
 .blog{
     grid-area: blog;
@@ -242,9 +222,17 @@ a{
     text-shadow: 5px 5px 1px rgba(180, 172, 172, 0.541);
     font-size: 50px;
 }
+/* -----------------------------------------------------------------------
+-------------------------------------------------------------------------- */
+/* THIS IS THE NAV BAR CSS  */
+
+/* this controls all CSS for the navbar */
+
 .nav2{
     border: solid;
-    color: #f7f1ec;
+    color: rgb(125, 95, 60);
+    text-decoration-color: aliceblue;
+    text-decoration: none;
     grid-area: nav;
     font-size: 20px;
     display: flex;
@@ -252,6 +240,14 @@ a{
     background-color: rgb(60, 96, 125);
     background-size: 20%;
 }
+#navtext {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/* ------------------------------------------------------------------------
+-------------------------------------------------------------------------- */
+
 .slogan {
     grid-area: slogan;
     display: grid;
@@ -266,11 +262,10 @@ a{
     margin-top: 5%;
 }
 #slog2 {
-    grid-area: slog2;
+    grid-area: slogan;
     display: grid;
     /* grid-column: inherit; */
     font-family: fantasy;
-    text-align: center;
     margin-left: 25%;
     width: 50%;
     height: 15%;
@@ -298,107 +293,113 @@ a{
 }
 #p2 {
     color: rgb(64, 77, 88);
-    font-size: 25px;
+    font-size: 45px;
     background-color: rgba(230, 201, 163, 0.911);
 }
-/* .footer4{
-    background-position: 10px; 
-    border: solid;   
-    grid-area: blog2;
-    grid-column: 1 /1;
-    background-color: blueviolet;
-}
-.footer5{
-    grid-area: footer;
-    grid-row: 5 /5;
-    grid-column: 2 /3;
-    background-color: blueviolet
-}
-a{
-    text-decoration: none;
-} */
-
 
 /* PAGE 3 CSS -------------------------- */
 
 .container3{
-        display: grid;
-        margin-top: 10%;
+        /* display: grid;
+        border: solid;
+        margin-top: 10%; */
+        /* display: flex; */
         /* defining how many columns there will be */
-        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr 1fr; */
         /* defines how many rows there will be */
-        grid-template-rows: 200px 50px 100px;
-        grid-template-areas:
-        
+        /* grid-template-rows: 200px 150px 100px 100px;
+        grid-template-areas: */
+/*         
             "header3 header3 header3"
             "nav nav nav"
             "slogan3 slogan3 slogan3"
-            /* "slogan3 slogan3 slogan3" */
-            "footer footer footer";
-        grid-gap: 500px;
-        justify-content: center;
-}
-#linkedin {
-    width: 75%;
-}
-.box43rd1 {
-        grid-area: header;
-        
-        display: flex;
-        justify-content: center;
-        font-size: 40px;
-        font-family: monospace;
-        color: aliceblue;
-        margin-top: 5%;
-        /* fix the header part */
-}
-#move {
-    align-content: center;
-}
-#SweetChariott:hover {
-            animation: SweetChariott 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-            height: 20%;
-            width: 20%;
-            cursor: pointer;
-            display: block;
-}
-#SweetChariott {
-    /* display: none; */
+            "slogan3 slogan3 slogan3"
+            "footer footer footer"; */
+        /* grid-gap: 400px; */
+        /* justify-content: space-around; */
+        margin-top: 20%;
+        align-items: center;
+        /* flex-wrap: wrap; */
 }
 
-@keyframes SweetChariott {
-    0% {
-              transform: rotateX(-100deg);
-              transform-origin: top;
-      opacity: 0;
-    }
-    100% {
-              transform: rotateX(0deg);
-              transform-origin: top;
-      opacity: 1;
-    }
+/* this is where I was upset because my Jquery wouldn't do the onhover the only good thing that came out of this 
+is the fact that the prices actually showed up on the page --- so we're just going to rock with it --- next... */
+/* .Resume1 {
+    size: 50%;
+}
+.Cover_Letter2 {
+    size: 50%;
+}
+#linkedin {
+    size: 50%;
+    width: 20%;
+}
+.Thank_You4 {
+    height: 100px;
+    width: 100px;
+}*/
+
+/* this is the css part for the prices portion on page 3 */
+.popcorn {
+    width: 100%;
+    height: 200px;
+    
+  }
+.popcorn {
+      position: absolute;
+     /* top: 10%;
+      left: 50%; */
+      margin: 25% 33%;
+     /* margin-left: -250px; */
+      width: 520px;
+      height: 800px;
+      background-color: rgb(134, 192, 117);
+      padding: 20px 40px;
+      z-index: 1000;
+      margin: auto;
+      top: 200%; left: 50%; bottom: 0; right: 0;
+      /* display: none; */
+  }
+.popbox div {
+      clear: both;
   }
   
+.popbox h3 {
+      display: inline;
+      font-size: 100px;
+  }
+  #zero {
+    font-size: 50px;
+  }
+/* .popbox nav.close {
+    float: right;
+    font-size: 50px;
+    color: #000000;
+    background:green;
+    z-index: 9999;
+    opacity: 0.2;
+  } */
 
 
 /* PAGE 4 CSS  ------------------------------- */
 
-.container4{
-    font-size: 20px;
+.slogan4{
+    font-size: 45px;
     display: grid;
     /* defining how many columns there will be */
     grid-template-columns: 1fr 1fr 1fr;
     /* defines how many rows there will be */
     grid-template-rows: 200px 50px 100px;
-    grid-template-areas:
+    /* grid-template-areas:
     
         "header3 header3 header3"
         "nav nav nav"
         "slogan3 slogan3 slogan3"
         "slogan3 slogan3 slogan3"
-        "footer footer footer";
-    grid-gap: 150px;
+        "footer footer footer"; */
+    grid-gap: 30px;
     margin-top: 10%;
+    margin-left: 25%;
     color: aliceblue;
     text-shadow: 10px 10px 20px black; 
 }
@@ -406,16 +407,25 @@ a{
     color: aliceblue;
     font-size: 25px;
 }
+/* no keyframe or javascript needed.. just used the transform and transition methods to enlarge on hover */
 .scale{
     transform: scale(1, 1);
     transition: transform 0.5s ease;
 }
+
 .box:hover .scale{
     transform: scale(1.5, 1.5);
 }
 .slogan4 {
     color: aliceblue;
-    font-size: 50%;
+    font-size: 100%;
+    text-decoration: none;
+}
+#p4 {
+    color: aliceblue;
+    font-size: 100%;
+    text-decoration: none;
+
 }
 #pg5 {
     text-decoration: none;
@@ -463,14 +473,27 @@ a{
     float: right;
     animation: slideRight 2s forwards;
 } 
-/* #Monique {
+#testimony {
+    font-size: 150%;
+}
+
+/* ---------------------- TIME RESTRAINT ----------------
+
+This one wasn't working with me... and I tried to do the keyframe 
+animation for this part... but... yeah..
+
+
+#Monique {
     grid-area: slogan3;
     text-align: right;
 }
 #mo {
     float: left;
     animation: slideRight 2s forwards;
-} */
+} 
+---------------------------------------------------------*/
+
+
 #Klyn {
     grid-area: slogan3;
     text-align: right;
@@ -480,6 +503,7 @@ a{
     float: left;
     animation: slideLeft 2s forwards;
 }
+/* here is what allows the pictures and words to flow into each other from opposite ends */
 @keyframes slideLeft{
     0%{
           margin-left: -900px;
@@ -502,21 +526,63 @@ a{
     animation: slideRight 2s forwards;
 }
 
-/* PAGE 6 CSS ---------------------- */
+/* PAGE 6 CSS ---------------------- ------------------------------*/
 
 .build {
     color: aliceblue;
     font-size:  35px;
     text-align: center;
-    margin-top: 25%;
+    margin-top: 15%;
 }
-#b {
-    text-align: center;
-    list-style: none;
-    margin-top: 25%;
+.Video {
+    margin-left: 40%;
+    margin-top: 240px;
 }
 
 
 /* PAGE 7 CSS -------------------------------------- */
+/* the background for the modal */
+.modalback {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+/* the content of the modal */
+.content {
+    width: 500px;
+    height: 55%;
+    background-color: cadetblue;
+    border-radius: 10%;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+#schedule {
+    align-content: center;
+}
+input {
+    width: 50%;
+    /* creating a block level element to take up all the space */
+    display: block;
+    margin: 15px auto;
+
+}
+.close {
+    position: absolute;
+    top: 12px;
+    right: 2%;
+    font-size: 30px;
+    transform: rotate(20deg);
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------
+--------------------------------------------------------------- */
 
 

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SEVENTHPAGE</title>
+    <title>MODALFORM</title>
+  
     <link rel="stylesheet" href="../CSS/main.css">
 </head>
 
@@ -24,28 +25,48 @@
         <p><a href="../index_pages/index7.html"> Contact Us</a></p>
 
     </div>
-    <div id="slog2">
+    <!-- <div id="slog2">
             <h1> Find Us </h1>
-        </div>
+        </div> -->
 
+        <section class="modal">
+            <div class="modal-content">
+            <!-- THE MODALLLLLLLLLLLLLLLLLLLLLLLLLL
+            
+            honestly, this was my favorite part making this. I learned something new with making my modal -->
 
-        <form id="Formy">
-            <p>
-                <label> First Name </label>
-                <input type="text" name="FirstName"> <br> 
-                <label> Last Name </label>
-                <input type="text" name="LastName"> <br>
-                <label> Email Address </label>
-                <input type="text" name="Email">
-            </p>
-            <p>
-            <input type="submit" value="Submit">
-            </p>
-        </form>
-        <p id="result"> </p>
+                <!-- there is no button tag because I'm creating the "click" in javascript -- I thought this was extra dope
+                because the less I have in my html and can make it work from javascript, the less confusing and messy my html looks -->
+                <a href="#" id="button" class="button"> <div id="slog2">
+                    <h1> SCHEDULE YOUR APPOINTMENT TODAY!  </h1>
+                </div>
+         </a>
+            </div>
+        </section>
+<!-- started with creating the background for my modal then the content which includes the form & the "exit" and "submit" FUNCTIONS - not BUTTONS 
+ -->
+ <div class="modalback">
+<div class="content">
+<div class="close"> EXIT </div>
+<!-- I added a picture of a emoji grand dad.. idk why.. he just worked out that way -->
+    <img src="../images/emojihead.jpeg" alt="Grandpa Emoji">
 
-
+<!-- I even gave them placeholders ^___^ -->
+<form action="">
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="email">
+    <a href="" id="button" class="button"> SUBMIT</a>
+</form>
+</div>
+ </div>
   
+
+ 
+ <script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
 
         <script src="../app.js"></script>
 
